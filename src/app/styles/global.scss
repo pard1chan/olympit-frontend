@@ -1,0 +1,166 @@
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  @include fluid-text(14, 12);
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Inter Tight", sans-serif;
+
+  color: var(--color-primary);
+  background-color: var(--bg-color);
+}
+
+#app {
+  padding-bottom: fluid(40, 20);
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: var(--color-primary);
+}
+
+h1,
+.h1 {
+  @include fluid-text(22, 18);
+
+  font-weight: 700;
+}
+h2,
+.h2 {
+  @include fluid-text(20, 16);
+
+  font-weight: 600;
+}
+h3,
+.h3 {
+  @include fluid-text(16, 14);
+
+  font-weight: 600;
+}
+h4,
+.h4 {
+  @include fluid-text(24, 18);
+
+  font-weight: 600;
+}
+h5,
+.h5 {
+  @include fluid-text(14, 12);
+
+  font-weight: 400;
+}
+h6,
+.h6 {
+  @include fluid-text(14, 12);
+
+  font-weight: 300;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+.block {
+  padding: 20px;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-m);
+}
+
+.hidden-on-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-red-45);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+.link {
+  color: var(--color-pink);
+  font-weight: 700;
+  align-self: end;
+
+  @include hover {
+    color: #e05780;
+    text-decoration: underline;
+  }
+}
+
+:focus-visible {
+  @include focus-visible;
+}
+
+.v-toast {
+  @include mobile {
+    padding-right: 5px !important;
+  }
+}
+
+.error {
+  color: #d00000;
+}
+
+.floating-toggle {
+  display: none;
+
+  @include tablet {
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 200px;
+    z-index: 100;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  @include mobile {
+    top: 100px;
+  }
+}
