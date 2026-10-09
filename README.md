@@ -118,4 +118,4 @@ The image builds the app in a Node stage and serves it with nginx.
 
 ## Author
 
-<your name> — [LinkedIn](https://www.linkedin.com/in/<your-handle>) · <your email>
+**Serafim Lukin** — [LinkedIn](https://www.linkedin.com/in/serafim-lukin/) · [GitHub](https://github.com/pard1chan)
